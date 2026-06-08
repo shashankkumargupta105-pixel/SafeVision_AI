@@ -102,9 +102,9 @@ export default function AboutPage() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ scale: 1.03 }}
-                className={`glass-card p-8 border ${bgClasses[problem.color]} hover:border-${problem.color}-50 transition-all duration-300`}
+                className={`glass-card p-8 border ${bgClasses[problem.color as keyof typeof bgClasses]} hover:border-${problem.color}-50 transition-all duration-300`}
               >
-                <div className={`${colorClasses[problem.color]} mb-4`}>{problem.icon}</div>
+                <div className={`${colorClasses[problem.color as keyof typeof colorClasses]} mb-4`}>{problem.icon}</div>
                 <h3 className="text-2xl font-bold text-white mb-4">{problem.title}</h3>
                 <p className="text-gray-400">{problem.description}</p>
               </motion.div>

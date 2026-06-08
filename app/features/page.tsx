@@ -100,9 +100,9 @@ export default function FeaturesPage() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ scale: 1.05, y: -5 }}
-              className={`glass-card p-6 border ${borderClasses[feature.color]} hover:border-${feature.color}-50 transition-all duration-300 cursor-pointer`}
+              className={`glass-card p-6 border ${borderClasses[feature.color as keyof typeof borderClasses]} hover:border-${feature.color}-50 transition-all duration-300 cursor-pointer`}
             >
-              <div className={`${colorClasses[feature.color]} mb-4`}>{feature.icon}</div>
+              <div className={`${colorClasses[feature.color as keyof typeof colorClasses]} mb-4`}>{feature.icon}</div>
               <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
               <p className="text-gray-400 text-sm">{feature.description}</p>
             </motion.div>

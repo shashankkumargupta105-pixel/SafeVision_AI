@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Users, Shield, Vest, AlertTriangle, ClipboardCheck, TrendingUp, Mail, MessageSquare } from "lucide-react";
+import { Users, Shield,  AlertTriangle, ClipboardCheck, TrendingUp, Mail, MessageSquare } from "lucide-react";
 
 export default function FeaturesPage() {
   const features = [
@@ -16,7 +16,7 @@ export default function FeaturesPage() {
       color: "secondary",
     },
     {
-      icon: <Vest className="w-8 h-8" />,
+      icon: <Shield className="w-8 h-8" />,
       title: "Safety Vest Detection",
       description: "Verify high-visibility safety equipment usage in hazardous areas.",
       color: "accent",

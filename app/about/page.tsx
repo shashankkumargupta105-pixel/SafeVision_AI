@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { AlertTriangle, ClockDashed, DollarSign, FileText, Video, Cpu, Shield, Bell } from "lucide-react";
+import { AlertTriangle, Clock, DollarSign, FileText, Video, Cpu, Shield, Bell } from "lucide-react";
 
 export default function AboutPage() {
   const problems = [
@@ -10,7 +10,7 @@ export default function AboutPage() {
       color: "red",
     },
     {
-      icon: <ClockDashed className="w-12 h-12" />,
+      icon: <Clock  className="w-12 h-12" />,
       title: "Production Downtime",
       description: "Safety incidents lead to significant production losses and operational disruptions.",
       color: "orange",

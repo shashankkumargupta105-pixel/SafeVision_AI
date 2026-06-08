@@ -146,7 +146,7 @@ export default function ArchitecturePage() {
           <h2 className="text-3xl font-bold text-center mb-12 gradient-text">Architecture Overview</h2>
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 md:space-x-4">
             {steps.map((step, index) => (
-              <React.Fragment key={index}>
+              <>
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   className="glass-card p-4 text-center min-w-[120px]"
@@ -156,7 +156,7 @@ export default function ArchitecturePage() {
                 {index < steps.length - 1 && (
                   <div className="hidden md:block text-primary text-2xl">↓</div>
                 )}
-              </React.Fragment>
+         </ >
             ))}
           </div>
         </motion.div>

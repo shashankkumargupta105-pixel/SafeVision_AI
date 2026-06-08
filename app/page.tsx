@@ -1,3 +1,4 @@
+import React from "react";
 import { motion } from "framer-motion";
 import { Shield, Camera, CheckCircle, Zap, Clock, Eye, ArrowRight } from "lucide-react";
 import Link from "next/link";

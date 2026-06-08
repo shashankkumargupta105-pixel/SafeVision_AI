@@ -98,9 +98,9 @@ export default function ArchitecturePage() {
                 <div className={`w-full lg:w-5/12 ${index % 2 === 0 ? "lg:pr-12" : "lg:pl-12"}`}>
                   <motion.div
                     whileHover={{ scale: 1.03 }}
-                    className={`glass-card p-8 border ${borderClasses[step.color]} hover:border-${step.color}-50 transition-all duration-300`}
+                    className={`glass-card p-8 border ${borderClasses[step.color as keyof typeof borderClasses]} hover:border-${step.color}-50 transition-all duration-300`}
                   >
-                    <div className={`${colorClasses[step.color]} mb-4`}>{step.icon}</div>
+                    <div className={`${colorClasses[step.color as keyof typeof colorClasses]} mb-4`}>{step.icon}</div>
                     <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>
                     <p className="text-gray-400">{step.description}</p>
                   </motion.div>
@@ -127,8 +127,8 @@ export default function ArchitecturePage() {
               <div className="flex-shrink-0 w-12 h-12 bg-gradient-primary rounded-full items-center justify-center text-white font-bold flex">
                 {index + 1}
               </div>
-              <div className={`glass-card p-6 border ${borderClasses[step.color]} flex-1`}>
-                <div className={`${colorClasses[step.color]} mb-2`}>{step.icon}</div>
+              <div className={`glass-card p-6 border ${borderClasses[step.color as keyof typeof borderClasses]} flex-1`}>
+                <div className={`${colorClasses[step.color as keyof typeof colorClasses]} mb-2`}>{step.icon}</div>
                 <h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
                 <p className="text-gray-400 text-sm">{step.description}</p>
               </div>

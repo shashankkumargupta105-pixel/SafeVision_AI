@@ -85,14 +85,14 @@ export default function TechnologyPage() {
               transition={{ delay: index * 0.1 }}
               className="glass-card p-8"
             >
-              <div className={`${colorClasses[category.color]} mb-6`}>{category.icon}</div>
+              <div className={`${colorClasses[category.color as keyof typeof colorClasses]} mb-6`}>{category.icon}</div>
               <h2 className="text-2xl font-bold text-white mb-6">{category.title}</h2>
               <div className="space-y-4">
                 {category.technologies.map((tech, techIndex) => (
                   <motion.div
                     key={techIndex}
                     whileHover={{ scale: 1.02 }}
-                    className={`p-4 rounded-lg border ${bgClasses[category.color]} hover:border-${category.color}-50 transition-all duration-300`}
+                    className={`p-4 rounded-lg border ${bgClasses[category.color as keyof typeof bgClasses]} hover:border-${category.color}-50 transition-all duration-300`}
                   >
                     <h3 className="text-lg font-semibold text-white mb-1">{tech.name}</h3>
                     <p className="text-gray-400 text-sm">{tech.desc}</p>
